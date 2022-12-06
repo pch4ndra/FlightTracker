@@ -57,7 +57,7 @@ def index():
             conn.close()
             # Update Template
             stri = [str("INSERTED")]
-            return render_template(html_template, output = stri)
+            return render_template(html_template, output = stri, map_image = "static/map.png")
         elif 'delete' in request.form:
             # Establish Database Connection
             conn = sql.connect(database)
@@ -72,7 +72,7 @@ def index():
             conn.close()
             # Update Template
             stri = [str("DELETED")]
-            return render_template(html_template, output = stri)
+            return render_template(html_template, output = stri, map_image = "static/map.png")
         elif 'update' in request.form:
             # Establish Database Connection
             conn = sql.connect(database)
@@ -89,7 +89,7 @@ def index():
             conn.close()
             # Update Template
             stri = [str("UPDATED " + oldiata + " to " + newiata)]
-            return render_template(html_template, output = stri)
+            return render_template(html_template, output = stri, map_image = "static/map.png")
         elif 'search' in request.form:
             # Establish Database Connection
             conn = sql.connect(database)
@@ -113,7 +113,7 @@ def index():
             conn.commit()
             conn.close()
             # Update Template
-            return render_template(html_template, output = stri)
+            return render_template(html_template, output = stri, map_image = "static/map.png")
         elif 'aquery1' in request.form:
             # Establish Database Connection
             conn = sql.connect(database)
@@ -129,7 +129,7 @@ def index():
             conn.commit()
             conn.close()
             # Update Template
-            return render_template(html_template, output = stri)
+            return render_template(html_template, output = stri, map_image = "static/map.png")
         elif 'aquery2' in request.form:
             # Establish Database Connection
             conn = sql.connect(database)
@@ -145,7 +145,7 @@ def index():
             conn.commit()
             conn.close()
             # Update Template
-            return render_template(html_template, output = stri)
+            return render_template(html_template, output = stri, map_image = "static/map.png")
         elif 'sprocedure' in request.form:
             # Establish Database Connection
             conn = sql.connect(database)
