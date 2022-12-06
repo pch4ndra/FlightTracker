@@ -6,14 +6,8 @@
 | ----------- | ---------------------- |
 | TeamID      |        Team-056        |
 | TeamName    |         leBored        |
-| Captain     |   Sahith Thummalapally |
-| Captain     |  sahitht2@illinois.edu |
 | Member1     |      Pranav Chandra    |
 | Member1     |  pranavc5@illinois.edu |
-| Member2     |       Prith Balaji     |
-| Member2     |  pbalaji3@illinois.edu |
-| Member3     |  -                     |
-| Member3     |  - |
 
 ## Project Information
 
