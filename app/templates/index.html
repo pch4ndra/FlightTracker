@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CS 411 Project</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function yesnoCheckInsert(that) {
+          if (that.value == "Flights") {
+              document.getElementById("ifFlights1").style.display = "block";
+          } else {
+              document.getElementById("ifFlights1").style.display = "none";
+          }
+          if (that.value == "Tickets") {
+              document.getElementById("ifTickets1").style.display = "block";
+          } else {
+              document.getElementById("ifTickets1").style.display = "none";
+          }
+          if (that.value == "Passengers") {
+              document.getElementById("ifPassengers1").style.display = "block";
+          } else {
+              document.getElementById("ifPassengers1").style.display = "none";
+          }
+          if (that.value == "Airports") {
+              document.getElementById("ifAirports1").style.display = "block";
+          } else {
+              document.getElementById("ifAirports1").style.display = "none";
+          }
+          if (that.value == "Airlines") {
+              document.getElementById("ifAirlines1").style.display = "block";
+          } else {
+              document.getElementById("ifAirlines1").style.display = "none";
+          }
+          if (that.value == "Planes") {
+              document.getElementById("ifPlanes1").style.display = "block";
+          } else {
+              document.getElementById("ifPlanes1").style.display = "none";
+          }
+          if (that.value == "PleaseSelect") {
+              document.getElementById("pleaseSelect1").style.display = "block";
+              document.getElementById("button1").style.display = "none";
+          } else {
+              document.getElementById("button1").style.display = "block";
+              document.getElementById("pleaseSelect1").style.display = "none";
+          }
+      }
+      function yesnoCheckDelete(that) {
+          if (that.value == "Flights") {
+              document.getElementById("ifFlights2").style.display = "block";
+          } else {
+              document.getElementById("ifFlights2").style.display = "none";
+          }
+          if (that.value == "Tickets") {
+              document.getElementById("ifTickets2").style.display = "block";
+          } else {
+              document.getElementById("ifTickets2").style.display = "none";
+          }
+          if (that.value == "Passengers") {
+              document.getElementById("ifPassengers2").style.display = "block";
+          } else {
+              document.getElementById("ifPassengers2").style.display = "none";
+          }
+          if (that.value == "Airports") {
+              document.getElementById("ifAirports2").style.display = "block";
+          } else {
+              document.getElementById("ifAirports2").style.display = "none";
+          }
+          if (that.value == "Airlines") {
+              document.getElementById("ifAirlines2").style.display = "block";
+          } else {
+              document.getElementById("ifAirlines2").style.display = "none";
+          }
+          if (that.value == "Planes") {
+              document.getElementById("ifPlanes2").style.display = "block";
+          } else {
+              document.getElementById("ifPlanes2").style.display = "none";
+          }
+          if (that.value == "PleaseSelect") {
+              document.getElementById("pleaseSelect2").style.display = "block";
+              document.getElementById("button2").style.display = "none";
+          } else {
+              document.getElementById("button2").style.display = "block";
+              document.getElementById("pleaseSelect2").style.display = "none";
+          }
+      }
+      function yesnoCheckSearch(that) {
+          if (that.value == "PleaseSelect") {
+              document.getElementById("pleaseSelect4").style.display = "block";
+              document.getElementById("searchbox").style.display = "none";
+              document.getElementById("button4").style.display = "none";
+          } else {
+              document.getElementById("button4").style.display = "block";
+              document.getElementById("searchbox").style.display = "block";
+              document.getElementById("pleaseSelect4").style.display = "none";
+          }
+      }
+    </script>
+
+    <h1>CS 411 Project</h1>
+    <h3>Insert Record</h3>
+    <form method="POST">
+      <label for="inserttable">Choose a Table:</label>
+      <select name="inserttable" id="inserttable" onchange="yesnoCheckInsert(this);">
+        <option value="PleaseSelect" selected>Please Select</option>
+        <option value="Airports">Airports</option>
+        <option value="Airlines">Airlines</option>
+        <option value="Passengers">Passengers</option>
+        <option value="Flights">Flights</option>
+        <option value="Tickets">Tickets</option>
+        <option value="Planes">Planes</option>
+      </select>
+      <br>
+      <div id="pleaseSelect1" style="display: none;">
+        <input type="text" placeholder="Please Select A Value" name="placeholder"></input>
+      </div>
+      <div id="ifAirports1" style="display: none;">
+        <input type="text" placeholder="IATACode" name="AirportsIATACode"></input>
+        <input type="text" placeholder="Name" name="AirportsName"></input>
+        <input type="text" placeholder="City" name="AirportsCity"></input>
+        <input type="text" placeholder="State" name="AirportsState"></input>
+        <input type="text" placeholder="Country" name="AirportsCountry"></input>
+        <input type="text" placeholder="PassengerRank2021" name="AirportsPassengerRank2021"></input>
+        <input type="text" placeholder="PassengerServed2021" name="AirportsPassengerServed2021"></input>
+      </div>
+      <div id="ifAirlines1" style="display: none;">
+        <input type="text" placeholder="Name" name="AirlinesName"></input>
+        <input type="text" placeholder="MainHub" name="AirlinesMainHub"></input>
+        <input type="text" placeholder="IATACode" name="AirlinesIATACode"></input>
+      </div>
+      <div id="ifPassengers1" style="display: none;">
+        <input type="text" placeholder="Name" name="PassengersName"></input>
+        <input type="text" placeholder="MainAirline" name="PassengersMainAirline"></input>
+        <input type="text" placeholder="RewardsID" name="PassengersRewardsID"></input>
+        <input type="text" placeholder="Age" name="PassengersAge"></input>
+        <input type="text" placeholder="Gender" name="PassengersGender"></input>
+        <input type="text" placeholder="Race" name="PassengersRace"></input>
+        <input type="text" placeholder="HomeAirport" name="PassengersHomeAirport"></input>
+      </div>
+      <div id="ifFlights1" style="display: none;">
+        <input type="text" placeholder="IATACode" name="FlightsIATACode"></input>
+        <input type="text" placeholder="FlightNum" name="FlightsFlightNum"></input>
+        <input type="text" placeholder="Depart From" name="FlightsDepart From"></input>
+        <input type="text" placeholder="Destination" name="FlightsDestination"></input>
+        <input type="text" placeholder="Manufacturer" name="FlightsManufacturer"></input>
+        <input type="text" placeholder="Model" name="FlightsModel"></input>
+        <input type="text" placeholder="Takeoff Date" name="FlightsTakeoff Date"></input>
+      </div>
+      <div id="ifTickets1" style="display: none;">
+        <input type="text" placeholder="TicketID" name="TicketsTicketID"></input>
+        <input type="text" placeholder="Airline" name="TicketsAirline"></input>
+        <input type="text" placeholder="FlightNum" name="TicketsFlightNum"></input>
+        <input type="text" placeholder="RewardsID" name="TicketsRewardsID"></input>
+        <input type="text" placeholder="Price" name="TicketsPrice"></input>
+      </div>
+      <div id="ifPlanes1" style="display: none;">
+        <input type="text" placeholder="Manufacturer" name="PlanesManufacturer"></input>
+        <input type="text" placeholder="Model" name="PlanesModel"></input>
+        <input type="text" placeholder="NumInUSFleet" name="PlanesNumInUSFleet"></input>
+        <input type="text" placeholder="KgPKm" name="PlanesKgPKm"></input>
+        <input type="text" placeholder="MaxPassengers" name="PlanesMaxPassengers"></input>
+      </div>
+      <br>
+      <div id="button1" style="display: none;">
+        <button type="submit" name="insert">Execute</button>
+      </div>
+    </form>
+    <hr>
+    <h3>Delete Record</h3>
+    <form method="POST">
+      <label for="deletetable">Choose a Table:</label>
+      <select name="deletetable" id="deletetable" onchange="yesnoCheckDelete(this);">
+        <option value="PleaseSelect" selected>Please Select</option>
+        <option value="Airports">Airports</option>
+        <option value="Airlines">Airlines</option>
+        <option value="Passengers">Passengers</option>
+        <option value="Flights">Flights</option>
+        <option value="Tickets">Tickets</option>
+        <option value="Planes">Planes</option>
+      </select>
+      <br>
+      <div id="pleaseSelect2" style="display: none;">
+        <input type="text" placeholder="Please Select A Value" name="placeholder"></input>
+      </div>
+      <div id="ifAirports2" style="display: none;">
+        <input type="text" placeholder="IATACode" name="Airports2"></input>
+      </div>
+      <div id="ifAirlines2" style="display: none;">
+        <input type="text" placeholder="IATACode" name="Airlines2"></input>
+      </div>
+      <div id="ifPassengers2" style="display: none;">
+        <input type="text" placeholder="RewardsID" name="Passengers2"></input>
+      </div>
+      <div id="ifFlights2" style="display: none;">
+        <input type="text" placeholder="FlightNum" name="Flights2"></input>
+      </div>
+      <div id="ifTickets2" style="display: none;">
+        <input type="text" placeholder="TicketID" name="Tickets2"></input>
+      </div>
+      <div id="ifPlanes2" style="display: none;">
+        <input type="text" placeholder="Model" name="Planes2"></input>
+      </div>
+      <br>
+      <div id="button2" style="display: none;">
+        <button type="submit" name="delete">Execute</button>
+      </div>
+    </form>
+    <hr>
+    <h3>Update Record</h3>
+    <form method="POST">
+      <label for="updatetable">Choose a Table:</label>
+      <select name="updatetable" id="updatetable">
+        <option value="PleaseSelect" selected>Please Select</option>
+        <option value="Airports">Airports</option>
+        <option value="Airlines">Airlines</option>
+        <option value="Passengers">Passengers</option>
+        <option value="Flights">Flights</option>
+        <option value="Tickets">Tickets</option>
+        <option value="Planes">Planes</option>
+      </select>
+      <br>
+      <input type="text" placeholder="Old IATACode" name="oldiata"></input>
+      <input type="text" placeholder="New IATACode" name="newiata"></input>
+      <br>
+      <button type="submit" name="update">Execute</button>
+    </form>
+    <hr>
+    <h3>Search Record</h3>
+    <form method="POST">
+      <label for="searchtable">Choose a Table:</label>
+      <select name="searchtable" id="searchtable" onchange="yesnoCheckSearch(this);">
+        <option value="PleaseSelect" selected>Please Select</option>
+        <option value="Airports">Airports</option>
+        <option value="Airlines">Airlines</option>
+        <option value="Passengers">Passengers</option>
+        <option value="Flights">Flights</option>
+        <option value="Tickets">Tickets</option>
+        <option value="Planes">Planes</option>
+      </select>
+      <br>
+      <div id="searchbox" style="display: none;">
+        <input type="text" placeholder="Search Record" name="searcher"></input>
+      </div>
+      <div id="pleaseSelect4" style="display: none;">
+        <input type="text" placeholder="Please Select A Value" name="placeholder"></input>
+      </div>
+      <br>
+      <div id="button4" style="display: none;">
+        <button type="submit" name="search">Execute</button>
+      </div>
+    </form>
+    <hr>
+    <h3>Plane Models And Times They Flew between 80% and 85% Capacity</h3>
+    <form method="POST">
+      <button type="submit" name="aquery1">Execute</button>
+    </form>
+    <hr>
+    <h3>How Many Times Certain Airlines Flew Out of an Airport</h3>
+    <form method="POST">
+      <button type="submit" name="aquery2">Execute</button>
+    </form>
+    <hr>
+    <h3>Stored Procedure For Finding Efficient And Inefficient Flights</h3>
+    <form method="POST">
+      <button type="submit" name="sprocedure">Execute</button>
+    </form>
+    <hr>
+    <img src="{{ map_image }}" alt="Map" width="600" height="500">
+    {% for item in output %}
+      <p>{{item}}</p>
+    {% endfor %}
+  </body>
+</html>
