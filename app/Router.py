@@ -216,7 +216,7 @@ def index():
 
             # Update Template
             return render_template(html_template, output = stri, map_image = "static/map.png")
-    return render_template(html_template, output=[])
+    return render_template(html_template, output=["Welcome To FlightTracker"], map_image = "static/map.png")
 
 # @app.route("/indexer/<stri>")
 # def indexer(stri):
