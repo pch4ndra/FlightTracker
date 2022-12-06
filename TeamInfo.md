@@ -7,7 +7,8 @@
 | TeamID      |        Team-056        |
 | TeamName    |         leBored        |
 | Member1     |      Pranav Chandra    |
-| Member1     |  pranavc5@illinois.edu |
+| Email1     |  pranavchandra7@gmail.com |
+| Email2     |  pranavc5@illinois.edu |
 
 ## Project Information
 
